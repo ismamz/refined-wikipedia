@@ -1,0 +1,190 @@
+/* ==========================================================================
+   Refined Wikipedia (Dark Mode)
+   https://github.com/ismamz/refined-wikipedia
+   ========================================================================== */
+
+/**
+ * Color Pallete
+ * Based on https://github.com/sindresorhus/hyperterm-snazzy
+ *
+ * $background-color: #282a36;
+ * $foreground-color: #eff0eb;
+ * $link-color: #57c7ff;
+ * $yellow: #f3f99d;
+ * $border-color: #222430;
+ * $cursor-color: #97979b;
+ */
+
+
+
+/* Global
+   ========================================================================== */
+
+/* improved text rendering */
+html.dark-mode * {
+	-webkit-font-smoothing: antialiased !important;
+}
+
+/* background and foreground colors */
+html.dark-mode body,
+html.dark-mode #mw-mf-page-center {
+	background-color: #282a36 !important;
+	color: #eff0eb !important;
+}
+
+/* links */
+html.dark-mode #mw-mf-page-center a {
+	color: #57c7ff !important;
+}
+
+/* header style */
+html.dark-mode .header-container {
+	/* NOTE: Change icon colors if change header background */
+	/* background-color: #97979b; */
+	border-bottom: 0;
+}
+
+/* toc */
+html.dark-mode .toc-mobile {
+	background-color: #222430;
+	border: 1px solid #97979b;
+}
+
+/* thumbcaption color */
+html.dark-mode .thumbcaption {
+	color: #97979b;
+}
+
+/* math equations */
+html.dark-mode .mwe-math-fallback-image-inline {
+	background-color: #fff !important;
+	padding: 2px !important;
+	border-radius: 2px !important;
+}
+
+html.dark-mode .wikidata-description {
+	color: #97979b;
+}
+
+/* images */
+html.dark-mode .thumbimage {
+	background-color: #fff !important;
+	padding: 2px !important;
+	border-radius: 2px !important;
+}
+
+html.dark-mode .hatnote,
+html.dark-mode .dablink,
+html.dark-mode .rellink {
+	color: #f3f99d;
+}
+
+
+
+/* Misc
+   ========================================================================== */
+
+/* buttons */
+html.dark-mode #mw-mf-page-center a.mw-ui-button,
+html.dark-mode .mw-ui-button {
+	background-color: #222430;
+	color: #fff !important;
+}
+
+/* replace inline gray for yellow */
+html.dark-mode span[style="color:#555;"] {
+	color: #f3f99d !important;
+}
+
+/* overlay on menu open */
+html.dark-mode body.navigation-enabled .transparent-shield {
+	background: rgba(0, 0, 0, .7);
+}
+
+/* arrows for collapsibles */
+html.dark-mode .mw-ui-icon-arrow:before {
+	background-image: linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIC00MDcgMjQgMjQiPgogICAgPGcgaWQ9Imc0Ij4KICAgICAgICA8cGF0aCBkPSJNMjEuMzQ4LTQwMS4yNjhxLjk0IDAgMS42MS42NjhsLjkyLjkyMi0xMS44NTggMTEuODZMLjE5OC0zOTkuNjZsLjkyMi0uOTRxLjY1LS42ODYgMS41OS0uNjg2Ljk0IDAgMS42MS42NjhsNy43MTggNy43IDcuNy03LjY4MnEuNjctLjY2OCAxLjYxLS42Njh6IiBpZD0icGF0aDYiIGZpbGw9IiNGRkZGRkYiLz4KICAgIDwvZz4KPC9zdmc+Cg==);
+}
+
+/* code blocks */
+html.dark-mode .mw-highlight {
+	background-color: #282a36;
+}
+
+
+/* Search Results
+   ========================================================================== */
+
+/* search overlay */
+html.dark-mode .search-overlay,
+html.dark-mode .overlay-content,
+html.dark-mode .overlay-content-body {
+	background-color: #282a36;
+	color: #eff0eb;
+}
+
+/* search results data */
+html.dark-mode .mw-search-result-data {
+	color: #9aedfe;
+}
+
+/* background search result */
+html.dark-mode .page-list {
+	background-color: #222430;
+}
+
+/* text for search results */
+html.dark-mode.page-summary h2,
+html.dark-mode .page-summary h3 {
+	color: #57c7ff;
+}
+
+/* Search Did You Mean */
+html.dark-mode .searchdidyoumean {
+	color: #ff5c57;
+}
+
+/*  */
+html.dark-mode .site-link-list a {
+	background-color: #222430;
+	color: #eff0eb;
+}
+html.dark-mode .site-link-list a .autonym {
+	color: #fff;
+}
+
+
+
+/* Infobox
+   ========================================================================== */
+
+/* preserve original colors */
+html.dark-mode table.infobox {
+	color: #000 !important;
+}
+
+/* preserve original colors for links */
+html.dark-mode #mw-mf-page-center table.infobox a {
+	color: #0645ad !important;
+}
+
+/* tables inside content */
+html.dark-mode .content table.wikitable > tr > th,
+html.dark-mode .content table.wikitable > * > tr > th {
+	background-color: #222430;
+}
+
+
+
+/* Footer
+   ========================================================================== */
+
+/* external links on article footer */
+html.dark-mode table.mbox-small {
+	background-color: #282a36 !important;
+}
+
+/* last modified */
+html.dark-mode #mw-mf-last-modified {
+	background-color: #282a36 !important;
+}

@@ -1,0 +1,125 @@
+/* ==========================================================================
+   Refined Wikipedia
+   https://github.com/ismamz/refined-wikipedia
+   ========================================================================== */
+
+/* Global Styles
+   ========================================================================== */
+
+/* global font-size */
+#mw-mf-viewport {
+	font-size: 18px !important;
+}
+
+/* global max-width */
+#mw-mf-page-center .mw-mf-banner, .banner-container, .header, .page-header-bar, .content-header, .overlay-header, .content, .overlay-content, .content-unstyled, .pre-content, .post-content, .content-overlay, #mw-mf-page-center .pointer-overlay {
+	max-width: 45em !important;
+}
+
+.language-overlay .panel-body, .language-overlay .overlay-content-body {
+	max-width: 45em !important;
+}
+
+
+
+/* Main Title
+   ========================================================================== */
+
+/* increase vertical spacing */
+.pre-content {
+	margin: 1em auto !important;
+}
+
+.feature-page-action-bar-v2 .heading-holder {
+	padding-bottom: 1.5em !important;
+}
+
+/* increase font size  */
+h1#section_0 {
+	font-size: 2.5em !important;
+}
+
+
+
+/* TOC
+   ========================================================================== */
+
+/* toc box */
+.toc-mobile {
+	width: 100% !important;
+}
+
+.toc-mobile #toc-collapsible-block-0 > ul {
+	font-weight: bold !important;
+	list-style: disc !important;
+}
+
+.toc-mobile #toc-collapsible-block-0 > ul > li > ul {
+	font-weight: normal !important;
+	list-style: circle !important;
+}
+
+.toc-mobile #toc-collapsible-block-0 > ul > li > ul > li > ul {
+	font-style: italic !important;
+	list-style: square !important;
+}
+
+.toc-mobile ul ul ul {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+
+
+/* Misc
+   ========================================================================== */
+/* thumb caption font size */
+.thumbcaption {
+	font-size: 0.75em !important;
+}
+
+/* add margin bottom to lists of sections */
+@media (min-width: 720px) {
+	[class^="mf-section-"] ul {
+		margin-bottom: 1.5em !important;
+	}
+}
+
+/* make wider tables */
+.content table.wikitable {
+	width: 1080px	!important;
+	margin-left: -135px !important; /* 1080 - 810 / 2 */
+}
+
+/* adjust flags in table */
+/* NOTE: Review several cases */
+.content table .flagicon {
+	float: left !important;
+	margin-right: 10px !important;
+}
+
+
+
+/* Info Boxes
+   ========================================================================== */
+
+@media (min-width: 720px) {
+
+	/* improve style for infobox table */
+	.mf-section-0 table.infobox {
+		font-size: 13px !important;
+	}
+
+	.mf-section-0 table.infobox tr th[scope="row"],
+	.mf-section-0 table.infobox tr td:first-child:not([colspan="3"]) {
+		text-align: right !important;
+		background-color: #f3f3f3 !important;
+		line-height: 1.35 !important;
+	}
+
+	.mf-section-0 table.infobox tr th,
+	.mf-section-0 table.infobox tr td {
+		padding: 0.5em !important;
+	}
+
+}
