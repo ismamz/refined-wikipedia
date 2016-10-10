@@ -20,6 +20,11 @@
 	max-width: 45em !important;
 }
 
+.feature-footer-v2,
+.feature-footer-v2 #mw-mf-page-center {
+ background-color: transparent !important;
+}
+
 
 
 /* Main Title

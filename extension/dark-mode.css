@@ -26,6 +26,7 @@ html.dark-mode * {
 }
 
 /* background and foreground colors */
+html.dark-mode .mw-body,
 html.dark-mode body,
 html.dark-mode #mw-mf-page-center {
 	background-color: #282a36 !important;
