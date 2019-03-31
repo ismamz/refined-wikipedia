@@ -6,16 +6,18 @@
 /**
  * Color Pallete
  * Based on https://github.com/sindresorhus/hyperterm-snazzy
- *
- * $background-color: #282a36;
- * $foreground-color: #eff0eb;
- * $link-color: #57c7ff;
- * $yellow: #f3f99d;
- * $border-color: #222430;
- * $cursor-color: #97979b;
  */
 
-
+html.dark-mode {
+	--background-color: #282a36;
+	--background-alt-color: hsla(231, 15%, 16%, 1);
+	--foreground-color: #eff0eb;
+	--link-color: #57c7ff;
+	--yellow: #f3f99d;
+	--border-color: #222430;
+	--cursor-color: #97979b;
+	--icon-filter: contrast(0) sepia(100%) hue-rotate(0) brightness(20) saturate(1);
+}
 
 /* Global
    ========================================================================== */
@@ -29,31 +31,36 @@ html.dark-mode * {
 html.dark-mode .mw-body,
 html.dark-mode body,
 html.dark-mode #mw-mf-page-center {
-	background-color: #282a36 !important;
-	color: #eff0eb !important;
+	background-color: var(--background-color) !important;
+	color: var(--foreground-color) !important;
 }
 
 /* links */
-html.dark-mode #mw-mf-page-center a {
-	color: #57c7ff !important;
+html.dark-mode #mw-mf-page-center a,
+html.dark-mode .overlay-content a
+{
+	color: var(--link-color) !important;
 }
 
 /* header style */
+html.dark-mode .branding-box {
+	filter: var(--icon-filter);
+}
+
 html.dark-mode .header-container {
-	/* NOTE: Change icon colors if change header background */
-	/* background-color: #97979b; */
+	background-color: var(--background-alt-color) !important;
 	border-bottom: 0;
 }
 
 /* toc */
 html.dark-mode .toc-mobile {
-	background-color: #222430;
-	border: 1px solid #97979b;
+	background-color: var(--border-color);
+	border: 1px solid var(--cursor-color);
 }
 
 /* thumbcaption color */
 html.dark-mode .thumbcaption {
-	color: #97979b;
+	color: var(--cursor-color);
 }
 
 /* math equations */
@@ -64,7 +71,7 @@ html.dark-mode .mwe-math-fallback-image-inline {
 }
 
 html.dark-mode .wikidata-description {
-	color: #97979b;
+	color: var(--cursor-color);
 }
 
 /* images */
@@ -77,8 +84,8 @@ html.dark-mode .thumbimage {
 html.dark-mode .hatnote,
 html.dark-mode .dablink,
 html.dark-mode .rellink {
-	color: #f3f99d;
-	background-color: #222430;
+	color: var(--yellow);
+	background-color: var(--border-color);
 }
 
 
@@ -89,13 +96,13 @@ html.dark-mode .rellink {
 /* buttons */
 html.dark-mode #mw-mf-page-center a.mw-ui-button,
 html.dark-mode .mw-ui-button {
-	background-color: #222430;
+	background-color: var(--border-color);
 	color: #fff !important;
 }
 
 /* replace inline gray for yellow */
 html.dark-mode span[style="color:#555;"] {
-	color: #f3f99d !important;
+	color: var(--yellow) !important;
 }
 
 /* overlay on menu open */
@@ -103,14 +110,47 @@ html.dark-mode body.navigation-enabled .transparent-shield {
 	background: rgba(0, 0, 0, .7);
 }
 
-/* arrows for collapsibles */
-html.dark-mode .mw-ui-icon-arrow:before {
-	background-image: linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIC00MDcgMjQgMjQiPgogICAgPGcgaWQ9Imc0Ij4KICAgICAgICA8cGF0aCBkPSJNMjEuMzQ4LTQwMS4yNjhxLjk0IDAgMS42MS42NjhsLjkyLjkyMi0xMS44NTggMTEuODZMLjE5OC0zOTkuNjZsLjkyMi0uOTRxLjY1LS42ODYgMS41OS0uNjg2Ljk0IDAgMS42MS42NjhsNy43MTggNy43IDcuNy03LjY4MnEuNjctLjY2OCAxLjYxLS42Njh6IiBpZD0icGF0aDYiIGZpbGw9IiNGRkZGRkYiLz4KICAgIDwvZz4KPC9zdmc+Cg==);
+html.dark-mode #mw-mf-page-left {
+	background: var(--background-color);
 }
+
+html.dark-mode #mw-mf-page-left ul li {
+	background: transparent;
+	border-top: none;
+}
+
+#mw-mf-page-left ul.hlist li a {
+	color: var(--link-color)!important;
+}
+
+/* invert colours of UI icons */
+html.dark-mode .mw-ui-icon,
+html.dark-mode a.external {
+	filter: var(--icon-filter);
+}
+
 
 /* code blocks */
 html.dark-mode .mw-highlight {
-	background-color: #282a36;
+	background-color: var(--background-color);
+}
+
+/* inline gallery */
+html.dark-mode .mw-parser-output .mod-gallery .gallerybox div {
+	background-color: var(--background-color) !important;
+}
+
+html.dark-mode li.gallerybox div.thumb {
+	background: var(--background-alt-color) !important;
+	border: none !important;
+}
+/* overlay */
+html.dark-mode .overlay-header-container {
+	background-color: var(--background-alt-color);
+}
+
+html.dark-mode .overlay.visible {
+	background-color: var(--background-color);
 }
 
 
@@ -121,8 +161,8 @@ html.dark-mode .mw-highlight {
 html.dark-mode .search-overlay,
 html.dark-mode .overlay-content,
 html.dark-mode .overlay-content-body {
-	background-color: #282a36;
-	color: #eff0eb;
+	background-color: var(--background-color);
+	color: var(--foreground-color);
 }
 
 /* search results data */
@@ -132,13 +172,13 @@ html.dark-mode .mw-search-result-data {
 
 /* background search result */
 html.dark-mode .page-list {
-	background-color: #222430;
+	background-color: var(--border-color);
 }
 
 /* text for search results */
 html.dark-mode.page-summary h2,
 html.dark-mode .page-summary h3 {
-	color: #57c7ff;
+	color: var(--link-color);
 }
 
 /* Search Did You Mean */
@@ -146,15 +186,13 @@ html.dark-mode .searchdidyoumean {
 	color: #ff5c57;
 }
 
-/*  */
 html.dark-mode .site-link-list a {
-	background-color: #222430;
-	color: #eff0eb;
+	background-color: var(--border-color);
+	color: var(--foreground-color);
 }
 html.dark-mode .site-link-list a .autonym {
 	color: #fff;
 }
-
 
 
 /* Infobox
@@ -177,16 +215,60 @@ html.dark-mode .content table.wikitable > * > tr > th {
 }
 
 
+/* Article Meta Boxes
+   ========================================================================== */
+
+html.dark-mode .ambox-learn-more {
+	color: var(--link-color) !important;
+}
+
+html.dark-mode .ambox,
+html.dark-mode .mbox-small
+{
+	background: var(--background-alt-color) !important;
+	color: var(--foreground-color) !important;
+}
+
+html.dark-mode .ambox-learn-more:before {
+	background-image: linear-gradient(to right,rgba(255,255,255,0),var(--background-alt-color) 50%) !important;
+}
+
+
 
 /* Footer
    ========================================================================== */
 
 /* external links on article footer */
-html.dark-mode table.mbox-small {
-	background-color: #282a36 !important;
+/* html.dark-mode table.mbox-small {
+	background-color: var(--background-color) !important;
+} */
+
+/* logo */
+html.dark-mode .read-more-container + h2 img {
+	filter: var(--icon-filter);
+}
+
+/* main container */
+html.dark-mode .minerva-footer
+{
+	background-color: var(--background-alt-color) !important;
+	border-top: solid 1px hsla(230, 15%, 8%, 1)
 }
 
 /* last modified */
-html.dark-mode #mw-mf-last-modified {
-	background-color: #282a36 !important;
+html.dark-mode .last-modified-bar
+{
+	background-color: var(--background-alt-color) !important;
+	border-bottom: solid 1px hsla(230, 15%, 8%, 1);
+}
+
+/* footer cards */
+html.dark-mode .ext-related-articles-card
+{
+	background-color: var(--background-color) !important;
+	border: 1px solid hsla(0, 0%, 0%, 1)!important;
+}
+
+html.dark-mode .ext-related-articles-card-detail h3:after {
+	background-image: linear-gradient(to right,rgba(255,255,255,0),var(--background-color) 50%);
 }
