@@ -4,7 +4,7 @@
 
 New features, interface tweaks or more keyboard shortcuts are welcome. You can send a [Pull Request](https://github.com/ismamz/refined-wikipedia/pull/new/master). It's available in all languages. If you find an error, please notify.
 
-<img src="screenshot-640x400.png" width="420">
+<img src="screenshot-640x400.png" align="left" width="420">
 <img src="screenshot-640x400-dark-mode.png" width="420">
 
 ## Highlights
