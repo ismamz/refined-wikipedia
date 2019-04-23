@@ -6,6 +6,10 @@
 /* Global Styles
    ========================================================================== */
 
+html {
+	scroll-behavior: smooth !important;
+}
+
 /* global font-size */
 #mw-mf-viewport {
 	font-size: 18px !important;
@@ -109,7 +113,6 @@ h1#section_0 {
    ========================================================================== */
 
 @media (min-width: 720px) {
-
 	/* improve style for infobox table */
 	.mf-section-0 table.infobox {
 		font-size: 13px !important;
@@ -126,5 +129,12 @@ h1#section_0 {
 	.mf-section-0 table.infobox tr td {
 		padding: 0.5em !important;
 	}
+}
 
+html blockquote.citado {
+	font-size: 110% !important;
+}
+
+html .references {
+	font-size: 15px;
 }

@@ -13,10 +13,13 @@ html.dark-mode {
 	--background-alt-color: hsla(231, 15%, 16%, 1);
 	--foreground-color: #eff0eb;
 	--link-color: #57c7ff;
+	--new-link-color: #ff6ac1;
 	--yellow: #f3f99d;
 	--border-color: #222430;
 	--cursor-color: #97979b;
 	--icon-filter: contrast(0) sepia(100%) hue-rotate(0) brightness(20) saturate(1);
+	--green: #5af78e;
+	--red: #ff5c57;
 }
 
 /* Global
@@ -26,6 +29,11 @@ html.dark-mode {
 html.dark-mode * {
 	-webkit-font-smoothing: antialiased !important;
 }
+
+html .mw-body {
+	transition: background-color .2s ease-in;
+}
+
 
 /* background and foreground colors */
 html.dark-mode .mw-body,
@@ -37,12 +45,15 @@ html.dark-mode #mw-mf-page-center {
 
 /* links */
 html.dark-mode #mw-mf-page-center a,
-html.dark-mode .overlay-content a
-{
+html.dark-mode .overlay-content a {
 	color: var(--link-color) !important;
 }
 
 /* header style */
+html.dark-mode .header {
+	border-top: 0 !important;
+}
+
 html.dark-mode .branding-box {
 	filter: var(--icon-filter);
 }
@@ -120,7 +131,7 @@ html.dark-mode #mw-mf-page-left ul li {
 }
 
 #mw-mf-page-left ul.hlist li a {
-	color: var(--link-color)!important;
+	color: var(--link-color) !important;
 }
 
 /* invert colours of UI icons */
@@ -128,7 +139,6 @@ html.dark-mode .mw-ui-icon,
 html.dark-mode a.external {
 	filter: var(--icon-filter);
 }
-
 
 /* code blocks */
 html.dark-mode .mw-highlight {
@@ -144,6 +154,7 @@ html.dark-mode li.gallerybox div.thumb {
 	background: var(--background-alt-color) !important;
 	border: none !important;
 }
+
 /* overlay */
 html.dark-mode .overlay-header-container {
 	background-color: var(--background-alt-color);
@@ -190,6 +201,7 @@ html.dark-mode .site-link-list a {
 	background-color: var(--border-color);
 	color: var(--foreground-color);
 }
+
 html.dark-mode .site-link-list a .autonym {
 	color: #fff;
 }
@@ -223,16 +235,14 @@ html.dark-mode .ambox-learn-more {
 }
 
 html.dark-mode .ambox,
-html.dark-mode .mbox-small
-{
+html.dark-mode .mbox-small {
 	background: var(--background-alt-color) !important;
 	color: var(--foreground-color) !important;
 }
 
 html.dark-mode .ambox-learn-more:before {
-	background-image: linear-gradient(to right,rgba(255,255,255,0),var(--background-alt-color) 50%) !important;
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0), var(--background-alt-color) 50%) !important;
 }
-
 
 
 /* Footer
@@ -249,26 +259,76 @@ html.dark-mode .read-more-container + h2 img {
 }
 
 /* main container */
-html.dark-mode .minerva-footer
-{
+html.dark-mode .minerva-footer {
 	background-color: var(--background-alt-color) !important;
 	border-top: solid 1px hsla(230, 15%, 8%, 1)
 }
 
 /* last modified */
-html.dark-mode .last-modified-bar
-{
+html.dark-mode .last-modified-bar {
 	background-color: var(--background-alt-color) !important;
 	border-bottom: solid 1px hsla(230, 15%, 8%, 1);
 }
 
 /* footer cards */
-html.dark-mode .ext-related-articles-card
-{
+html.dark-mode .ext-related-articles-card {
 	background-color: var(--background-color) !important;
-	border: 1px solid hsla(0, 0%, 0%, 1)!important;
+	border: 1px solid hsla(0, 0%, 0%, 1) !important;
 }
 
 html.dark-mode .ext-related-articles-card-detail h3:after {
-	background-image: linear-gradient(to right,rgba(255,255,255,0),var(--background-color) 50%);
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0), var(--background-color) 50%);
+}
+
+/*  */
+html.dark-mode .heading-holder .tagline {
+	color: var(--foreground-color) !important;
+	opacity: .85;
+}
+
+html.dark-mode blockquote {
+	border-left-color: var(--yellow) !important;
+}
+
+html.dark-mode .content .mw-parser-output > h2,
+html.dark-mode .content .section-heading {
+	border-bottom-color: hsla(230, 15%, 50%, .6);
+}
+
+html.dark-mode .mw-parser-output .mw-authority-control .mw-mf-linked-projects {
+	border: 1px solid var(--border-color);
+  background-color: var(--background-alt-color);
+  color: var(--foreground-color);
+}
+
+html.dark-mode .page-actions-menu {
+	border-top: 1px solid hsla(230, 15%, 50%, .6);
+  border-bottom: 1px solid hsla(230, 15%, 50%, .6);
+}
+
+
+html.dark-mode .drawer {
+	background-color: var(--background-alt-color);
+}
+
+html.dark-mode a:not([href]) {
+	color: var(--foreground-color);
+}
+
+
+html.dark-mode #mw-mf-page-center a.new,
+html.dark-mode #mw-mf-page-center a.new:visited,
+html.dark-mode #mw-mf-page-center a.new:hover {
+	color: var(--new-link-color) !important;
+}
+
+
+/* message box */
+html.dark-mode #bodyContent .panel .content {
+	background-color: var(--background-color);
+	color: var(--foreground-color);
+}
+
+html.dark-mode table:not(.infobox)[style] {
+	background-color: transparent !important;
 }

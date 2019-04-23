@@ -1,6 +1,6 @@
 {
 	"name": "Refined Wikipedia",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "Enforces the mobile web version of Wikipedia and improves its interface",
 	"homepage_url": "https://github.com/ismamz/refined-wikipedia",
 	"manifest_version": 2,

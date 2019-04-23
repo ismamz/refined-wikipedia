@@ -37,7 +37,7 @@ function registerShortcuts() {
 
 	// open / close language selector
 	Mousetrap.bindGlobal('shift+l', () => {
-		const btn = $('.language-selector a');
+		const btn = $('.language-selector');
 
 		if (btn) {
 			btn.click();
@@ -69,24 +69,19 @@ function registerShortcuts() {
 		}
 	});
 
-	// vim bindings
-	const pageScrollPctHeight = 0.9;
-	const fromScrollTop = n => document.body.scrollTop + n;
-	const scrollToY = y => window.scrollTo(0, y);
-
 	// go top
 	Mousetrap.bind('g t', () => {
-		scrollToY(0);
+		window.scrollTo(0, 0);
 	});
 
 	// scroll up
 	Mousetrap.bind('w', () => {
-		scrollToY(fromScrollTop(window.innerHeight * -pageScrollPctHeight));
+		window.scrollBy(0, -400);
 	});
 
 	// scroll down
 	Mousetrap.bind('s', () => {
-		scrollToY(fromScrollTop(window.innerHeight * pageScrollPctHeight));
+		window.scrollBy(0, 400);
 	});
 
 	// enable backspace to go back (and shift+left)
