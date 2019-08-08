@@ -1,6 +1,6 @@
 # <img src="extension/icon.png" width="45" align="left"> Refined Wikipedia
 
-> This Chrome extension enforce a mobile version of [Wikipedia](https://wikipedia.org) and improve its interface for a better experience on desktop. It's strongly inspired by [Refined Twitter](https://github.com/sindresorhus/refined-twitter) and [Refined GitHub](https://github.com/sindresorhus/refined-github) extensions created by [Sindre Sorhus](https://github.com/sindresorhus).
+> This Chrome and Firefox extension enforce a mobile version of [Wikipedia](https://wikipedia.org) and improve its interface for a better experience on desktop. It's strongly inspired by [Refined Twitter](https://github.com/sindresorhus/refined-twitter) and [Refined GitHub](https://github.com/sindresorhus/refined-github) extensions created by [Sindre Sorhus](https://github.com/sindresorhus).
 
 New features, interface tweaks or more keyboard shortcuts are welcome. You can send a [Pull Request](https://github.com/ismamz/refined-wikipedia/pull/new/master).
 
