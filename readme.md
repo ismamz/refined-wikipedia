@@ -4,23 +4,39 @@
 
 New features, interface tweaks or more keyboard shortcuts are welcome. You can send a [Pull Request](https://github.com/ismamz/refined-wikipedia/pull/new/master). It's available in all languages. If you find an error, please notify.
 
-<img src="screenshot-640x400.png" align="left" width="420">
-<img src="screenshot-640x400-dark-mode.png" width="420">
+
+#### Chrome
+
+<img src="chrome-screenshot-640x400.png" align="left" width="420">
+<img src="chrome-screenshot-640x400-dark-mode.png" width="420">
+
+---
+
+
+#### Firefox
+
+<img src="firefox-screenshot-640x400.png" align="left" width="420">
+<img src="firefox-screenshot-640x400-dark-mode.png" width="420">
+
 
 ## Highlights
 
-- Dark Mode :sunglasses:
-- Increase font size
+- Dark Mode 🕶
+- Increase font size 👓
 - Resize width container
 - Adjust Table of Contents
-- Many [keybord shortcuts](#keyboard-shortcuts)!
+- Many [keybord shortcuts](#keyboard-shortcuts)! ⌨️
 
 
 ## Install
 
+### Google Chrome
+
 Install it from the [Chrome Web Store](https://chrome.google.com/webstore/detail/refined-wikipedia/cnmnmlclbofploblcanilidpmklleppe) or [manually](http://superuser.com/a/247654/6877).
 
-Works on Firefox too, but requires [some manual steps for now](https://github.com/sindresorhus/refined-twitter/pull/3#issuecomment-217343256).
+### Firefox
+
+Install it from [Firefox Add-ons](https://addons.mozilla.org/es/firefox/addon/wikipedia-refined/).
 
 
 ## Keyboard shortcuts
@@ -43,7 +59,9 @@ Works on Firefox too, but requires [some manual steps for now](https://github.co
 
 - [Refined GitHub](https://github.com/sindresorhus/refined-github) - Like this, but for GitHub
 - [Refined Twitter](https://github.com/sindresorhus/refined-twitter) - Like this, but for Twitter
+- [Simplify Gmail](https://chrome.google.com/webstore/detail/simplify-gmail/pbmlfaiicoikhdbjagjbglnbfcbcojpj) - Simplifies Gmail interface to the bare minimum
 
+[Upvote on Product Hunt 👍](https://www.producthunt.com/posts/refined-wikipedia)
 
 ## License
 

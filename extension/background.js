@@ -1,6 +1,8 @@
 'use strict';
 
-chrome.runtime.onMessage.addListener((req, sender, respond) => {
+const browser = chrome || browser;
+
+browser.runtime.onMessage.addListener((req, sender, respond) => {
 	if (req.method === 'getMode') {
 		respond({darkMode: localStorage.darkMode});
 	}
@@ -11,13 +13,22 @@ chrome.runtime.onMessage.addListener((req, sender, respond) => {
 	}
 });
 
-chrome.webRequest.onBeforeRequest.addListener(details => {
+browser.webRequest.onBeforeRequest.addListener(details => {
 	if (details.method !== 'GET') {
 		return;
 	}
 
 	const url = new URL(details.url);
+
+	if (url.host.includes('.m.')) {
+		return;
+	}
+
 	let lang = url.hostname.split('.')[0];
+
+	if (lang === 'www') {
+		return;
+	}
 
 	if (lang === 'm' || lang === 'www' || lang === 'wikipedia') {
 		lang = 'www';
