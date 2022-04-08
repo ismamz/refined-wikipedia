@@ -1,6 +1,6 @@
 {
 	"name": "Refined Wikipedia",
-	"version": "0.1.5",
+	"version": "0.1.6",
 	"description": "__MSG_extensionDescription__",
 	"homepage_url": "https://github.com/ismamz/refined-wikipedia",
 	"manifest_version": 2,
@@ -9,7 +9,6 @@
 	"permissions": [
 		"webRequest",
 		"webRequestBlocking",
-		"storage",
 		"https://wikipedia.org/*",
 		"https://*.wikipedia.org/*"
 	],
